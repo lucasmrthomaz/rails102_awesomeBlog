@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+  # To provide secure acess to /article pages
+  # http_basic_authenticate_with name: "test", password: "123"
+
+
   def index
     @articles = Article.all
   end

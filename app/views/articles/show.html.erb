@@ -1,23 +1,30 @@
 <div class="container mx-auto items-center w-max">
 
-<article class="prose">
-<h1><%= "Titulo: " + @article.title %></h1>
+  <article class="prose">
+    <h1>
+      <%= "Titulo: " + @article.title %>
+    </h1>
 
-<div class="columns-2">
+    <div class="columns-2">
 
-<p><%= "Conteudo: " + @article.body %></p>
-<p><%= "Autor: " + @article.author %></p>
-<br>
+      <p>
+        <%= "Conteudo: " + @article.body %>
+      </p>
+      <p>
+        <%= "Autor: " + @article.author %>
+      </p>
+      <br>
 
-<ul>
-  <li class="btn btn-primary"><%= link_to "Editar", edit_article_path(@article) %></li>
-  <li class="btn btn-primary"><%= link_to "Apagar", article_path(@article), data: {
-    turbo_method: :delete,
-    turbo_confirm: "Are you sure?"
-  } %></li>
-</ul>
-
-</article>
+      <ul>
+        <li class="btn btn-primary">
+          <%= link_to "Editar" , edit_article_path(@article) %>
+        </li>
+        <li class="btn btn-primary">
+          <%= link_to "Apagar" , article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }
+            %>
+        </li>
+      </ul>
+  </article>
 
 </div>
 
